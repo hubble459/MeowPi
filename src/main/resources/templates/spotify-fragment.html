@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spotify</title>
+    <link rel="stylesheet" href="/css/spotify.css">
+</head>
+<body>
+<h1 id="title">Spotify Controller</h1>
+<h5 id="restart-service">[Restart Service]</h5>
+
+<img id="album-art" class="album-image"
+     src=""
+     alt="Album Image">
+<div class="controller">
+    <table style="text-align: left; width: 100%; float: none; margin-bottom: 1em;">
+        <tr>
+            <td id="time" style="width: 5%">
+                1:30
+            </td>
+            <td style="width: 90%;">
+                <div class="progress-block">
+                    <div id="progress"></div>
+                </div>
+            </td>
+            <td id="track-time" style="width: 5%">
+                3:00
+            </td>
+        </tr>
+    </table>
+    <p id="song-artist" class="song-artist">Artist</p>
+    <p id="song-title" class="song-title">Title</p>
+    <p id="song-album" class="song-album">Album</p>
+    <div th:replace="spotify-controller-fragment"></div>
+    <div id="queue">
+        <h2>Queue:</h2>
+        <div class="queue-item">
+            <table>
+                <tr style="float: left">
+                    <td style="width:20%">
+                        <img class="album-image-queue"
+                             src=""
+                             alt="Album Image">
+                    </td>
+                    <td style="width:80%">
+                        <p class="song-artist">Artist</p>
+                        <p class="song-title">Song</p>
+                        <p class="song-album">Album</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="queue-item">
+            <table>
+                <tr style="float: left">
+                    <td style="width:20%">
+                        <img class="album-image-queue"
+                             src=""
+                             alt="Album Image">
+                    </td>
+                    <td style="width:80%">
+                        <p class="song-artist">Artist</p>
+                        <p class="song-title">Song</p>
+                        <p class="song-album">Album</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/js/spotify.js"></script>
+</body>
+</html>

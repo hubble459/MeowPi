@@ -1,0 +1,21 @@
+body.content {
+    position: absolute;
+    padding: 1px 16px;
+}
+
+input {
+    height: 1em;
+    background-color: transparent;
+    border: transparent;
+    color: white;
+    margin: 1em;
+}
+
+table {
+    position: relative;
+    width: 95%;
+}
+
+th {
+    text-align: left;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="/css/tools.css">
+</head>
+<script type="text/javascript" src="/js/tools.js"></script>
+<body>
+<!-- Tab links -->
+<div class="tab">
+    <button class="tab-links" onclick="openTab(this, 'home')">Info</button>
+    <button class="tab-links" onclick="openTab(this, 'services')">Services</button>
+    <button class="tab-links" onclick="openTab(this, 'info')">Information Gathering</button>
+    <button class="tab-links" onclick="openTab(this, 'net')">Network</button>
+</div>
+
+<div id="home" class="tab-content">
+    <h3>MeowPi Web-interface</h3>
+    <p>Easy access to most kali tools with a simple click. Like
+        <span class="clickable" onclick="gotoTab(1)">start and stop services</span> for example.
+    </p>
+</div>
+
+<div id="services" class="tab-content">
+    <table class="table">
+    </table>
+</div>
+
+<div id="info" class="tab-content">
+    <h3>Information Gathering</h3>
+    <p>uwu</p>
+</div>
+
+<div id="net" class="tab-content">
+    <h3>Network Attacks</h3>
+    <p>owo</p>
+</div>
+</body>
+<script type="application/javascript">
+    gotoTab(0)
+</script>
+</html>

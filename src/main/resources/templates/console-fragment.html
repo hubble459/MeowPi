@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Console</title>
+    <link rel="stylesheet" href="/css/console.css">
+</head>
+<body>
+<h1 th:text="${console}"></h1>
+<pre id="output"></pre>
+<table style="width: 90%">
+    <tr>
+        <td><label for="input">></label></td>
+        <td style="width: 100%"><input style="width: 100%" name="input" id="input"/></td>
+    </tr>
+</table>
+</body>
+<script type="text/javascript" src="/js/console.js">
+</script>
+</html>

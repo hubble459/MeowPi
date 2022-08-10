@@ -1,0 +1,106 @@
+.album-image {
+    float: left;
+    width: 50%;
+    padding-right: 2em;
+}
+
+.album-image-queue {
+    height: 6em;
+    padding-right: 1em;
+}
+
+#title {
+    margin-bottom: 0;
+}
+
+#restart-service {
+    cursor: pointer;
+    color: tomato;
+    margin-top: 0;
+}
+
+#queue {
+    text-align: left;
+}
+
+.queue-item {
+    padding: 2em;
+    border-bottom: 2px solid #956b6b
+}
+
+.queue-artist {
+    color: darkmagenta;
+    font-size: x-small;
+}
+
+.queue-title {
+    color: #956b80;
+    font-size: smaller;
+
+}
+
+.queue-album {
+    color: maroon;
+    font-size: small;
+}
+
+p {
+    margin: 0;
+}
+
+.controller {
+    float: left;
+    padding-top: 1em;
+    width: 45%;
+    text-align: center;
+}
+
+.progress-block {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 4px;
+    background-color: darkgray;
+}
+
+#progress {
+    width: 75%;
+    height: 100%;
+    background-color: darkblue;
+}
+
+.song-artist {
+    font-size: 1.2em;
+    color: darkmagenta;
+}
+
+.song-title {
+    font-size: 2em;
+    color: #956b80;
+}
+
+.song-album {
+    font-size: 1.5em;
+    margin-bottom: .5em;
+    color: maroon;
+}
+
+@media screen and (max-width: 900px) {
+    .album-image {
+        float: none;
+        padding: 0;
+        width: 75%;
+    }
+
+    .queue-item {
+        padding: 1em;
+    }
+
+    .controller {
+        width: 100%;
+    }
+
+    body {
+        text-align: center;
+    }
+}

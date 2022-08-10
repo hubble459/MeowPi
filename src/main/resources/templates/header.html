@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="/css/header.css" rel="stylesheet"/>
+    <title>MeowFi</title>
+</head>
+<body>
+
+<ul class="sidenav" th:with="uri=${#httpServletRequest.requestURI}">
+    <div th:with="loggedIn=${#httpSession == null ? false : #httpSession.getAttribute('username') != null}" th:remove="tag">
+        <li th:unless="${loggedIn}"><a href="/login" th:class="${uri eq '/login'} ? 'active' : ''">Login</a></li>
+        <li th:if="${loggedIn}"><a style="color: darkred;" href="/logout">Logout</a></li>
+    </div>
+    <li><a href="/tools" th:class="${uri eq '/tools'} ? 'active' : ''">Tools</a></li>
+    <li><a href="/console" th:class="${uri eq '/console'} ? 'active' : ''">Console</a></li>
+    <li><a href="/spotify" th:class="${uri eq '/spotify'} ? 'active' : ''">Spotify</a></li>
+</ul>
+</body>
+</html>

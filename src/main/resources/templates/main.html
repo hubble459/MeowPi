@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/bg.css" rel="stylesheet"/>
+    <link href="/css/header.css" rel="stylesheet"/>
+    <link href="/icons/fav.png" rel="icon" type="images/png">
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>MeowFi</title>
+</head>
+<body>
+<div class="bg"></div>
+<div th:replace="header"></div>
+<div class="content" th:switch="${#httpServletRequest.requestURI}">
+    <div class="content-padding" th:case="'/login'">
+        <div th:replace="login-fragment"></div>
+    </div>
+    <div th:case="'/tools'">
+        <div th:replace="tools-fragment"></div>
+    </div>
+    <div class="content-padding" th:case="'/console'">
+        <div th:replace="console-fragment"></div>
+    </div>
+    <div class="content-padding" th:case="'/spotify'">
+        <div th:replace="spotify-fragment"></div>
+    </div>
+    <div class="content-padding" th:case="*">
+        <h1>Error!</h1>
+        <table>
+            <tr>
+                <td>Status code:</td>
+                <td th:text="${statusCode ?: '404'}"></td>
+            </tr>
+            <tr>
+                <td>Message:</td>
+                <td th:text="${exceptionMsg ?: 'Not Found'}"></td>
+            </tr>
+            <tr>
+                <td>Requested:</td>
+                <td th:text="${requestUri ?: #httpServletRequest.requestURI}"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>
